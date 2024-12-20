@@ -1,0 +1,13 @@
+You are given an array of integers arr[]. Your task is to reverse the given array.
+
+Approach: Take two pointers to point towards start and end of the array and swap them while traversing.
+TC=O(N)
+SC=O(1)
+
+void reverseArray(vector<int> &arr) {
+        int l=0;
+        int h=arr.size()-1;
+        while(l<=h){
+            swap(arr[l++],arr[h--]);
+        }
+    }
