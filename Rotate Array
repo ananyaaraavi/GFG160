@@ -1,0 +1,14 @@
+Given an array arr[]. Rotate the array to the left (counter-clockwise direction) by d steps, where d is a positive integer. Do the mentioned change in the array in place.
+
+Note: Consider the array as circular.
+
+Approach: First reverse the array from start till length d. Then reverse the array from length d to end. Then once again reverse the entire array.
+TC=O(2N)
+SC=O(1)
+
+void rotateArr(vector<int>& arr, int d) {
+        d=d%arr.size();
+        reverse(arr.begin(),arr.begin()+d);
+        reverse(arr.begin()+d,arr.begin()+arr.size());
+        reverse(arr.begin(),arr.end());
+    }
